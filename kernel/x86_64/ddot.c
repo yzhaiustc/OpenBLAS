@@ -27,7 +27,8 @@ USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 #include "common.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 #if defined(BULLDOZER)
 #include "ddot_microk_bulldozer-2.c"
@@ -58,7 +59,6 @@ static void ddot_kernel_8(BLASLONG n, FLOAT *x, FLOAT *y, FLOAT *d)
 {
 	BLASLONG register i = 0;
 	FLOAT dot = 0.0;
-
 	while(i < n)
         {
               dot += y[i]  * x[i]

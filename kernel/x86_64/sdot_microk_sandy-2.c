@@ -25,12 +25,15 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************/
 
+#include <stdlib.h>
+#include <stdio.h>
+
 #define HAVE_KERNEL_16 1
 static void sdot_kernel_16( BLASLONG n, FLOAT *x, FLOAT *y , FLOAT *dot) __attribute__ ((noinline));
 
 static void sdot_kernel_16( BLASLONG n, FLOAT *x, FLOAT *y, FLOAT *dot)
 {
-
+	printf("\nSandy Kernel!!!!!\n");
 
 	BLASLONG register i = 0;
 
